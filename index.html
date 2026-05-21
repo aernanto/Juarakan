@@ -59,118 +59,206 @@
         </div>
     </header>
 
-    <!-- Hero -->
+    <!-- Hero - Core Discovery Style -->
     <section class="hero" id="hero">
         <div class="hero-bg-blob blob-1"></div>
         <div class="hero-bg-blob blob-2"></div>
 
-        <div class="container hero-inner">
-            <div class="hero-copy">
+        <div class="container">
+            <div class="hero-marketing">
                 <span class="hero-badge">
                     <span class="dot"></span>
                     Lebih dari 1.200 lomba terverifikasi
                 </span>
                 <h1 class="hero-title">
-                    Lomba, tim, dan deadline.
-                    <span class="title-accent">Semua dalam satu tempat.</span>
+                    Satu app buat semua perjalanan lombamu.
+                    <span class="title-accent">#SaatnyaJadiJuara</span>
                 </h1>
                 <p class="hero-sub">
-                    Stop loncat dari Instagram ke WhatsApp ke Telegram cuma buat nyari info lomba. Juarakan ngumpulin <strong>kompetisi mahasiswa yang sudah dikurasi</strong>, bantu kamu <strong>nyari teammate</strong>, dan <strong>ingetin deadline</strong> biar gak ada lagi yang kelewat.
+                    Stop loncat dari Instagram ke WhatsApp ke Telegram. Juarakan ngumpulin <strong>kompetisi mahasiswa yang sudah dikurasi</strong>, bantu kamu <strong>nyari teammate</strong>, dan <strong>ingetin deadline</strong> biar gak ada lagi yang kelewat.
                 </p>
-
-                <div class="hero-cta">
-                    <a href="#cta" class="btn-primary btn-lg">
-                        Mulai Cari Lomba
-                        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </a>
-                    <a href="#how" class="btn-outline btn-lg">
-                        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M10 8l6 4-6 4z" fill="currentColor"/></svg>
-                        Lihat Cara Kerja
-                    </a>
-                </div>
-
-                <ul class="hero-points">
-                    <li><span class="check">✓</span> Gratis selamanya untuk fitur dasar</li>
-                    <li><span class="check">✓</span> Verifikasi penyelenggara</li>
-                    <li><span class="check">✓</span> Login sekali pakai Google</li>
-                </ul>
             </div>
 
-            <div class="hero-visual">
-                <div class="phone-wrap">
-                    <div class="phone-mockup">
-                        <div class="phone-screen">
-                            <div class="phone-greeting">
-                                <div>
-                                    <p class="greeting-hi">Hallo, Wira!</p>
-                                    <p class="greeting-sub">Mau ikut lomba apa hari ini?</p>
-                                </div>
-                                <div class="bell">
-                                    <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 3a6 6 0 0 0-6 6v3l-1.5 3h15L18 12V9a6 6 0 0 0-6-6zM10 19a2 2 0 0 0 4 0" stroke="#1F3B5C" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
-                                    <span class="bell-dot"></span>
-                                </div>
-                            </div>
+            <!-- App-style Discovery Card -->
+            <div class="app-shell" id="appShell">
+                <!-- Top Bar -->
+                <div class="app-topbar">
+                    <div class="app-greet">
+                        <p class="app-hi">Hallo, calon Juara!</p>
+                        <p class="app-sub">Mau ikut lomba apa hari ini?</p>
+                    </div>
+                    <button class="app-bell" aria-label="Notifikasi">
+                        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 3a6 6 0 0 0-6 6v3l-1.5 3h15L18 12V9a6 6 0 0 0-6-6zM10 19a2 2 0 0 0 4 0" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span class="bell-dot"></span>
+                    </button>
+                </div>
 
-                            <div class="search-bar">
-                                <svg viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="7" stroke="#86A0B8" stroke-width="2" fill="none"/><path d="M20 20l-3-3" stroke="#86A0B8" stroke-width="2" stroke-linecap="round"/></svg>
-                                <span>Cari kompetisi...</span>
-                            </div>
+                <!-- Search Bar -->
+                <button class="app-search" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">
+                    <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="7" stroke="#86A0B8" stroke-width="2" fill="none"/><path d="M20 20l-3-3" stroke="#86A0B8" stroke-width="2" stroke-linecap="round"/></svg>
+                    <span>Cari kompetisi...</span>
+                    <kbd>⌘ K</kbd>
+                </button>
 
-                            <div class="hero-card-banner">
-                                <div class="banner-tag">#SaatnyaJadiJuara</div>
-                                <h3>JUARAKAN</h3>
-                                <button class="banner-btn">Mulai mencari lomba</button>
-                            </div>
+                <!-- Hero Banner -->
+                <div class="app-banner">
+                    <div class="banner-clouds"></div>
+                    <div class="banner-clouds c2"></div>
+                    <div class="banner-hills"></div>
+                    <div class="banner-content">
+                        <span class="banner-hashtag">#SaatnyaJadiJuara</span>
+                        <h2 class="banner-title">JUARAKAN</h2>
+                        <a href="#cta" class="banner-cta">
+                            Mulai mencari lomba
+                            <svg viewBox="0 0 24 24" width="16" height="16"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                    <img src="assets/champions.png" alt="Mahasiswa juara mengangkat trofi" class="banner-illustration" />
+                </div>
 
-                            <p class="section-mini">Segera ditutup</p>
-                            <div class="mini-cards">
-                                <div class="mini-card">
-                                    <div class="mini-thumb thumb-a"></div>
-                                    <p class="mini-title">Lomba Desain Poster</p>
-                                    <span class="mini-tag">3 hari lagi</span>
-                                </div>
-                                <div class="mini-card">
-                                    <div class="mini-thumb thumb-b"></div>
-                                    <p class="mini-title">Video Pendek Nasional</p>
-                                    <span class="mini-tag">5 hari lagi</span>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Segera Ditutup -->
+                <div class="app-section">
+                    <div class="app-section-head">
+                        <h3>Segera ditutup</h3>
+                        <a href="#cta" class="see-all">Lihat semua
+                            <svg viewBox="0 0 24 24" width="14" height="14"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
                     </div>
 
-                    <!-- Floating notifications -->
-                    <div class="float-card float-card-1">
-                        <div class="float-icon green">
-                            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M20 6L9 17l-5-5" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </div>
-                        <div>
-                            <p class="fc-title">Pendaftaran berhasil!</p>
-                            <p class="fc-sub">Tim Juara Coding kamu siap</p>
-                        </div>
-                    </div>
+                    <div class="lomba-scroller">
+                        <!-- Gamelab Lomba Design Poster -->
+                        <article class="lomba-card">
+                            <div class="lomba-poster poster-gamelab">
+                                <div class="poster-overlay">
+                                    <div class="poster-brand">
+                                        <span class="poster-brand-logo">G</span>
+                                        <span>GAMELAB</span>
+                                    </div>
+                                    <h4 class="poster-title">
+                                        <span>LOMBA</span>
+                                        <span class="t-big">DESIGN POSTER</span>
+                                        <span class="t-med">DIGITAL</span>
+                                    </h4>
+                                    <div class="poster-theme">
+                                        <span>Tema:</span>
+                                        <strong>"Global Warming"</strong>
+                                    </div>
+                                    <p class="poster-date">5 - 31 Oktober 2025</p>
+                                    <div class="poster-prize">
+                                        <span class="prize-banner">HADIAH</span>
+                                    </div>
+                                </div>
+                                <span class="lomba-deadline">3 hari lagi</span>
+                                <button class="lomba-save" aria-label="Simpan">
+                                    <svg viewBox="0 0 24 24" width="16" height="16"><path d="M6 4h12v17l-6-4-6 4z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>
+                                </button>
+                            </div>
+                            <div class="lomba-meta">
+                                <span class="lomba-cat">Desain</span>
+                                <span class="lomba-credit">★ 8.4</span>
+                            </div>
+                            <h5 class="lomba-name">Gamelab Lomba Design Poster Digital</h5>
+                            <p class="lomba-org">Gamelab Indonesia</p>
+                        </article>
 
-                    <div class="float-card float-card-2">
-                        <div class="float-icon yellow">
-                            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 3a6 6 0 0 0-6 6v3l-1.5 3h15L18 12V9a6 6 0 0 0-6-6z" fill="#fff"/></svg>
-                        </div>
-                        <div>
-                            <p class="fc-title">Deadline besok!</p>
-                            <p class="fc-sub">BCC FT UI 2025</p>
-                        </div>
-                    </div>
+                        <!-- Video Pendek -->
+                        <article class="lomba-card">
+                            <div class="lomba-poster poster-img">
+                                <img src="assets/poster-video.jpg" alt="Lomba Video Pendek STDI Imam Syafi'i Jember" />
+                                <span class="lomba-deadline">5 hari lagi</span>
+                                <button class="lomba-save" aria-label="Simpan">
+                                    <svg viewBox="0 0 24 24" width="16" height="16"><path d="M6 4h12v17l-6-4-6 4z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>
+                                </button>
+                            </div>
+                            <div class="lomba-meta">
+                                <span class="lomba-cat">Video</span>
+                                <span class="lomba-credit">★ 7.9</span>
+                            </div>
+                            <h5 class="lomba-name">Lomba Video Pendek Bahasa Arab</h5>
+                            <p class="lomba-org">STDI Imam Syafi'i Jember</p>
+                        </article>
 
-                    <div class="float-card float-card-3">
-                        <div class="avatars">
-                            <span class="avatar a1"></span>
-                            <span class="avatar a2"></span>
-                            <span class="avatar a3"></span>
-                        </div>
-                        <div>
-                            <p class="fc-title">3 teammate cocok</p>
-                            <p class="fc-sub">Sesuai skill UI/UX kamu</p>
-                        </div>
+                        <!-- Hackathon -->
+                        <article class="lomba-card">
+                            <div class="lomba-poster poster-hack">
+                                <div class="poster-overlay-2">
+                                    <span class="hack-tag">HACKATHON</span>
+                                    <h4 class="hack-title">CODE FOR<br/>INDONESIA</h4>
+                                    <p class="hack-prize">Total Hadiah</p>
+                                    <p class="hack-amount">Rp 150 Juta</p>
+                                </div>
+                                <span class="lomba-deadline urgent">1 hari lagi</span>
+                                <button class="lomba-save" aria-label="Simpan">
+                                    <svg viewBox="0 0 24 24" width="16" height="16"><path d="M6 4h12v17l-6-4-6 4z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>
+                                </button>
+                            </div>
+                            <div class="lomba-meta">
+                                <span class="lomba-cat">Teknologi</span>
+                                <span class="lomba-credit">★ 9.1</span>
+                            </div>
+                            <h5 class="lomba-name">Code For Indonesia Hackathon</h5>
+                            <p class="lomba-org">Kemenkominfo</p>
+                        </article>
+
+                        <!-- Business -->
+                        <article class="lomba-card">
+                            <div class="lomba-poster poster-biz">
+                                <div class="poster-overlay-2">
+                                    <span class="hack-tag biz">BUSINESS PLAN</span>
+                                    <h4 class="hack-title">NEXT<br/>FOUNDERS</h4>
+                                    <p class="hack-prize">Mentor by</p>
+                                    <p class="hack-amount small">Bank Mandiri</p>
+                                </div>
+                                <span class="lomba-deadline">7 hari lagi</span>
+                                <button class="lomba-save" aria-label="Simpan">
+                                    <svg viewBox="0 0 24 24" width="16" height="16"><path d="M6 4h12v17l-6-4-6 4z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>
+                                </button>
+                            </div>
+                            <div class="lomba-meta">
+                                <span class="lomba-cat">Bisnis</span>
+                                <span class="lomba-credit">★ 8.7</span>
+                            </div>
+                            <h5 class="lomba-name">Next Founders Business Plan</h5>
+                            <p class="lomba-org">Bank Mandiri</p>
+                        </article>
                     </div>
                 </div>
+
+                <!-- Bottom Tab Nav -->
+                <nav class="app-tabbar" aria-label="Navigasi aplikasi">
+                    <a href="#hero" class="tab active">
+                        <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M20 20l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        <span>Core Discovery</span>
+                    </a>
+                    <a href="#features" class="tab">
+                        <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="9" cy="9" r="3.5" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="17" cy="11" r="2.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M2 19c0-2.5 2.5-4 6-4s6 1.5 6 4M14 19c0-1.5 1.5-3 4-3s4 1.5 4 3" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+                        <span>Team Match</span>
+                    </a>
+                    <a href="#features" class="tab">
+                        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 9l9-5 9 5-9 5z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/><path d="M7 11v5c2 2 8 2 10 0v-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+                        <span>Mentoring</span>
+                    </a>
+                    <a href="#features" class="tab">
+                        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 4h12v17l-6-4-6 4z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>
+                        <span>Saved</span>
+                    </a>
+                </nav>
+            </div>
+
+            <div class="hero-cta-row">
+                <a href="#cta" class="btn-primary btn-lg">
+                    Mulai Gratis Sekarang
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="#how" class="btn-outline btn-lg">
+                    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M10 8l6 4-6 4z" fill="currentColor"/></svg>
+                    Lihat Cara Kerja
+                </a>
+                <ul class="hero-points">
+                    <li><span class="check">✓</span> Gratis selamanya</li>
+                    <li><span class="check">✓</span> Login pakai Google</li>
+                    <li><span class="check">✓</span> Tanpa kartu kredit</li>
+                </ul>
             </div>
         </div>
     </section>
