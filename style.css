@@ -382,19 +382,85 @@ mark {
     right: -150px;
 }
 
-/* ==================== APP SHELL (Core Discovery Look) ==================== */
-.app-shell {
-    max-width: 880px;
+/* ==================== DEVICE FRAME (visual container for preview) ==================== */
+.device-frame {
+    max-width: 920px;
     margin: 0 auto;
-    background: linear-gradient(180deg, #F2F7E8 0%, #FFFFFF 36%, #F4F8FB 100%);
-    border-radius: 32px;
-    padding: 24px 20px 0;
-    box-shadow:
-        0 30px 80px rgba(31, 59, 92, 0.18),
-        0 0 0 1px rgba(255, 255, 255, 0.6) inset,
-        0 0 0 8px rgba(31, 59, 92, 0.04);
+    background: linear-gradient(180deg, #1F3B5C 0%, #2C4866 100%);
+    border-radius: 28px;
+    padding: 36px 14px 14px;
     position: relative;
     z-index: 2;
+    box-shadow:
+        0 30px 80px rgba(31, 59, 92, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+}
+
+.device-label {
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.device-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.device-dot-r { background: #ff5f57; }
+.device-dot-y { background: #febc2e; margin-left: -1px; }
+.device-dot-g { background: #28c840; margin-left: -1px; margin-right: 6px; }
+
+.device-screen {
+    background: linear-gradient(180deg, #F2F7E8 0%, #FFFFFF 30%, #F4F8FB 100%);
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+}
+
+.device-statusbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 22px 6px;
+    background: transparent;
+    color: var(--c-navy);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.status-time { letter-spacing: -0.01em; }
+
+.status-icons {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--c-navy);
+}
+
+.device-home {
+    height: 6px;
+    width: 36%;
+    background: var(--c-navy);
+    border-radius: 999px;
+    margin: 8px auto 6px;
+    opacity: 0.85;
+}
+
+/* ==================== APP SHELL (Core Discovery Look) ==================== */
+.app-shell {
+    background: transparent;
+    padding: 4px 14px 0;
+    position: relative;
     overflow: hidden;
 }
 
@@ -907,11 +973,10 @@ mark {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 4px;
-    padding: 12px 8px;
-    margin: 24px -20px 0;
+    padding: 10px 8px 6px;
+    margin: 20px -14px 0;
     background: white;
     border-top: 1px solid var(--c-border-soft);
-    border-radius: 0 0 32px 32px;
 }
 
 .tab {
@@ -2291,15 +2356,43 @@ mark {
     .hero-marketing .hero-title { font-size: 28px; }
     .hero-marketing .hero-sub { font-size: 14px; }
 
+    .device-frame {
+        padding: 28px 8px 8px;
+        border-radius: 22px;
+    }
+
+    .device-label {
+        top: 7px;
+        left: 12px;
+        font-size: 10px;
+    }
+
+    .device-label .device-dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .device-screen {
+        border-radius: 14px;
+    }
+
+    .device-statusbar {
+        padding: 8px 16px 4px;
+        font-size: 11px;
+    }
+
+    .device-home {
+        width: 30%;
+        margin-top: 6px;
+    }
+
     .app-shell {
-        padding: 18px 14px 0;
-        border-radius: 24px;
+        padding: 4px 10px 0;
     }
 
     .app-tabbar {
-        margin: 18px -14px 0;
-        border-radius: 0 0 24px 24px;
-        padding: 10px 4px;
+        margin: 16px -10px 0;
+        padding: 8px 4px 4px;
     }
 
     .tab span { font-size: 10px; }
