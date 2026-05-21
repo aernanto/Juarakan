@@ -382,56 +382,14 @@ mark {
     right: -150px;
 }
 
-/* ==================== APP SHELL (Seamless phone-screen look) ==================== */
+/* ==================== CORE DISCOVERY (merged into page, no card) ==================== */
 .app-shell {
-    max-width: 880px;
+    max-width: 1080px;
     margin: 0 auto;
-    background: linear-gradient(180deg, #F2F7E8 0%, #FFFFFF 30%, #F4F8FB 100%);
-    border-radius: 28px;
-    padding: 0 16px;
+    background: transparent;
+    padding: 0;
     position: relative;
     z-index: 2;
-    overflow: hidden;
-    box-shadow:
-        0 30px 80px rgba(31, 59, 92, 0.18),
-        0 0 0 1px rgba(31, 59, 92, 0.06);
-}
-
-.app-statusbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 14px 12px 8px;
-    color: var(--c-navy);
-    font-size: 13px;
-    font-weight: 700;
-    opacity: 0.7;
-}
-
-.status-time { letter-spacing: -0.01em; }
-
-.status-icons {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: var(--c-navy);
-}
-
-.app-home-bar {
-    background: white;
-    margin: 0 -16px;
-    padding: 4px 0 8px;
-    display: grid;
-    place-items: center;
-}
-
-.app-home {
-    height: 5px;
-    width: 32%;
-    max-width: 140px;
-    background: var(--c-navy);
-    border-radius: 999px;
-    opacity: 0.55;
 }
 
 .app-topbar {
@@ -439,25 +397,26 @@ mark {
     align-items: flex-start;
     justify-content: space-between;
     gap: 12px;
-    padding: 4px 4px 16px;
+    padding: 0 0 16px;
 }
 
 .app-hi {
-    font-size: clamp(20px, 2.5vw, 28px);
+    font-size: clamp(22px, 2.6vw, 30px);
     font-weight: 800;
     color: var(--c-navy);
     line-height: 1.15;
+    letter-spacing: -0.01em;
 }
 
 .app-sub {
-    font-size: clamp(13px, 1.4vw, 15px);
+    font-size: clamp(14px, 1.4vw, 16px);
     color: var(--c-text-soft);
-    margin-top: 4px;
+    margin-top: 6px;
 }
 
 .app-bell {
-    width: 44px;
-    height: 44px;
+    width: 46px;
+    height: 46px;
     border-radius: 12px;
     background: white;
     color: var(--c-navy);
@@ -467,6 +426,7 @@ mark {
     position: relative;
     flex-shrink: 0;
     transition: all var(--tr);
+    cursor: pointer;
 }
 
 .app-bell:hover { transform: scale(1.05); box-shadow: var(--shadow); }
@@ -487,16 +447,16 @@ mark {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 14px 18px;
+    padding: 16px 20px;
     background: white;
     border: 1.5px solid #B6C7DC;
-    border-radius: 12px;
+    border-radius: 14px;
     color: var(--c-text-light);
-    font-size: 14px;
+    font-size: 15px;
     font-family: inherit;
     cursor: pointer;
     transition: all var(--tr);
-    margin-bottom: 18px;
+    margin-bottom: 22px;
 }
 
 .app-search:hover {
@@ -512,10 +472,10 @@ mark {
     position: relative;
     background: linear-gradient(180deg, #B7D6E8 0%, #DCE8C4 100%);
     border-radius: 20px;
-    padding: 24px 20px 28px;
+    padding: 32px 28px 36px;
     overflow: hidden;
-    min-height: 220px;
-    margin-bottom: 24px;
+    min-height: 240px;
+    margin-bottom: 32px;
     display: flex;
     align-items: center;
 }
@@ -602,12 +562,14 @@ mark {
 
 .banner-illustration {
     position: absolute;
-    right: -10px;
+    right: 0;
     bottom: 0;
-    height: 220px;
+    height: 100%;
+    max-height: 280px;
     width: auto;
-    max-width: 45%;
+    max-width: 50%;
     object-fit: contain;
+    object-position: right bottom;
     z-index: 1;
     filter: drop-shadow(0 6px 12px rgba(31, 59, 92, 0.2));
     transition: transform 0.4s ease;
@@ -618,20 +580,20 @@ mark {
 }
 
 /* App Section */
-.app-section { padding: 0 4px; }
+.app-section { padding: 0; }
 
 .app-section-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 14px;
-    padding: 0 4px;
+    margin-bottom: 18px;
 }
 
 .app-section-head h3 {
-    font-size: 18px;
+    font-size: clamp(18px, 2vw, 22px);
     font-weight: 800;
     color: var(--c-navy);
+    letter-spacing: -0.01em;
 }
 
 .see-all {
@@ -938,43 +900,48 @@ mark {
         radial-gradient(circle at 100% 0%, rgba(0, 0, 0, 0.15), transparent 50%);
 }
 
-/* Bottom Tabbar */
+/* Feature nav (was bottom tabbar) — now a horizontal nav bar inside hero */
 .app-tabbar {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 4px;
-    padding: 12px 8px 6px;
-    margin: 20px -16px 0;
+    gap: 8px;
+    padding: 16px 12px;
+    margin-top: 32px;
     background: white;
-    border-top: 1px solid var(--c-border-soft);
+    border-radius: 18px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--c-border-soft);
 }
 
 .tab {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
-    padding: 8px 4px;
+    gap: 6px;
+    padding: 10px 6px;
     border-radius: 12px;
-    color: var(--c-text-light);
-    font-size: 11px;
+    color: var(--c-text-soft);
+    font-size: 12px;
     font-weight: 600;
     transition: all var(--tr);
+    text-align: center;
 }
 
 .tab:hover {
     background: var(--c-primary-light);
     color: var(--c-primary);
+    transform: translateY(-2px);
 }
 
 .tab.active {
     color: var(--c-primary);
+    background: var(--c-primary-light);
 }
 
 .tab.active::after {
     content: '';
-    width: 4px;
-    height: 4px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     background: var(--c-primary);
     margin-top: -2px;
@@ -2311,9 +2278,9 @@ mark {
     }
     .lomba-card { width: 180px; }
 
-    .app-banner { min-height: 200px; padding: 18px 14px 24px; }
+    .app-banner { min-height: 200px; padding: 22px 18px 26px; }
     .banner-content { max-width: 58%; }
-    .banner-illustration { height: 180px; right: -16px; }
+    .banner-illustration { max-height: 200px; }
     .banner-title { font-size: 32px; }
 }
 
@@ -2326,24 +2293,24 @@ mark {
     .hero-marketing .hero-title { font-size: 28px; }
     .hero-marketing .hero-sub { font-size: 14px; }
 
-    .app-shell {
-        padding: 0 12px;
-        border-radius: 22px;
+    .app-shell { padding: 0; }
+
+    .app-banner {
+        min-height: 200px;
+        padding: 24px 20px 28px;
+        margin-bottom: 24px;
     }
 
-    .app-statusbar {
-        padding: 12px 8px 6px;
-        font-size: 11px;
-    }
+    .banner-illustration { max-height: 220px; }
 
     .app-tabbar {
-        margin: 16px -12px 0;
-        padding: 10px 4px 4px;
+        margin-top: 24px;
+        padding: 12px 8px;
+        gap: 4px;
     }
 
-    .app-home-bar {
-        margin: 0 -12px;
-    }
+    .tab { font-size: 11px; padding: 8px 4px; }
+    .tab svg { width: 20px; height: 20px; }
 
     .tab span { font-size: 10px; }
     .tab svg { width: 20px; height: 20px; }
@@ -2401,8 +2368,8 @@ mark {
 
     .stats-grid { grid-template-columns: 1fr; }
 
-    .app-banner { min-height: 180px; padding: 16px 12px 22px; }
-    .banner-illustration { height: 150px; max-width: 50%; }
+    .app-banner { min-height: 180px; padding: 18px 14px 22px; }
+    .banner-illustration { max-height: 170px; max-width: 50%; }
     .banner-title { font-size: 26px; }
     .banner-hashtag { font-size: 10px; padding: 4px 10px; }
     .banner-cta { font-size: 11px; padding: 8px 14px; }
