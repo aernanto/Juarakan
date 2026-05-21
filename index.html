@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Juarakan: platform terpusat buat mahasiswa Indonesia nyari, ikut, dan menang lomba. Cari teammate, atur deadline, dan dapetin mentor terbaik di satu tempat." />
+    <meta name="theme-color" content="#4F7CAC" />
+    <title>Juarakan - #SaatnyaJadiJuara</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%234F7CAC'/%3E%3Cpath d='M22 18h20v8a10 10 0 0 1-20 0z M28 30h8v8h-8z M24 40h16v4H24z' fill='%23F4C95D'/%3E%3C/svg%3E" />
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="#hero" class="logo" aria-label="Juarakan">
+                <span class="logo-mark">
+                    <svg viewBox="0 0 32 32" aria-hidden="true">
+                        <path d="M9 6h14v6a7 7 0 0 1-14 0V6z" fill="#F4C95D"/>
+                        <path d="M9 8H6a3 3 0 0 0 3 3M23 8h3a3 3 0 0 1-3 3" stroke="#F4C95D" stroke-width="1.5" fill="none"/>
+                        <path d="M14 19h4v4h-4z" fill="#F4C95D"/>
+                        <path d="M11 23h10v3H11z" fill="#F4C95D"/>
+                    </svg>
+                </span>
+                <span class="logo-text">Juarakan</span>
+            </a>
+
+            <nav class="nav-links" aria-label="Navigasi utama">
+                <a href="#features">Fitur</a>
+                <a href="#how">Cara Kerja</a>
+                <a href="#stats">Dampak</a>
+                <a href="#testimonial">Cerita</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#login" class="btn-ghost">Masuk</a>
+                <a href="#cta" class="btn-primary">Coba Gratis</a>
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+            <a href="#features">Fitur</a>
+            <a href="#how">Cara Kerja</a>
+            <a href="#stats">Dampak</a>
+            <a href="#testimonial">Cerita</a>
+            <a href="#faq">FAQ</a>
+            <div class="mobile-actions">
+                <a href="#login" class="btn-ghost btn-block">Masuk</a>
+                <a href="#cta" class="btn-primary btn-block">Coba Gratis</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-blob blob-1"></div>
+        <div class="hero-bg-blob blob-2"></div>
+
+        <div class="container hero-inner">
+            <div class="hero-copy">
+                <span class="hero-badge">
+                    <span class="dot"></span>
+                    Lebih dari 1.200 lomba terverifikasi
+                </span>
+                <h1 class="hero-title">
+                    Lomba, tim, dan deadline.
+                    <span class="title-accent">Semua dalam satu tempat.</span>
+                </h1>
+                <p class="hero-sub">
+                    Stop loncat dari Instagram ke WhatsApp ke Telegram cuma buat nyari info lomba. Juarakan ngumpulin kompetisi mahasiswa yang sudah dikurasi, bantu kamu nyari teammate, dan ingetin deadline biar gak ada lagi yang kelewat.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="#cta" class="btn-primary btn-lg">
+                        Mulai Cari Lomba
+                        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="#how" class="btn-outline btn-lg">
+                        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M10 8l6 4-6 4z" fill="currentColor"/></svg>
+                        Lihat Cara Kerja
+                    </a>
+                </div>
+
+                <ul class="hero-points">
+                    <li><span class="check">✓</span> Gratis selamanya untuk fitur dasar</li>
+                    <li><span class="check">✓</span> Verifikasi penyelenggara</li>
+                    <li><span class="check">✓</span> Login sekali pakai Google</li>
+                </ul>
+            </div>
+
+            <div class="hero-visual">
+                <div class="phone-wrap">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="phone-greeting">
+                                <div>
+                                    <p class="greeting-hi">Hallo, Wira!</p>
+                                    <p class="greeting-sub">Mau ikut lomba apa hari ini?</p>
+                                </div>
+                                <div class="bell">
+                                    <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 3a6 6 0 0 0-6 6v3l-1.5 3h15L18 12V9a6 6 0 0 0-6-6zM10 19a2 2 0 0 0 4 0" stroke="#1F3B5C" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+                                    <span class="bell-dot"></span>
+                                </div>
+                            </div>
+
+                            <div class="search-bar">
+                                <svg viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="7" stroke="#86A0B8" stroke-width="2" fill="none"/><path d="M20 20l-3-3" stroke="#86A0B8" stroke-width="2" stroke-linecap="round"/></svg>
+                                <span>Cari kompetisi...</span>
+                            </div>
+
+                            <div class="hero-card-banner">
+                                <div class="banner-tag">#SaatnyaJadiJuara</div>
+                                <h3>JUARAKAN</h3>
+                                <button class="banner-btn">Mulai mencari lomba</button>
+                            </div>
+
+                            <p class="section-mini">Segera ditutup</p>
+                            <div class="mini-cards">
+                                <div class="mini-card">
+                                    <div class="mini-thumb thumb-a"></div>
+                                    <p class="mini-title">Lomba Desain Poster</p>
+                                    <span class="mini-tag">3 hari lagi</span>
+                                </div>
+                                <div class="mini-card">
+                                    <div class="mini-thumb thumb-b"></div>
+                                    <p class="mini-title">Video Pendek Nasional</p>
+                                    <span class="mini-tag">5 hari lagi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating notifications -->
+                    <div class="float-card float-card-1">
+                        <div class="float-icon green">
+                            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M20 6L9 17l-5-5" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div>
+                            <p class="fc-title">Pendaftaran berhasil!</p>
+                            <p class="fc-sub">Tim Juara Coding kamu siap</p>
+                        </div>
+                    </div>
+
+                    <div class="float-card float-card-2">
+                        <div class="float-icon yellow">
+                            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 3a6 6 0 0 0-6 6v3l-1.5 3h15L18 12V9a6 6 0 0 0-6-6z" fill="#fff"/></svg>
+                        </div>
+                        <div>
+                            <p class="fc-title">Deadline besok!</p>
+                            <p class="fc-sub">BCC FT UI 2025</p>
+                        </div>
+                    </div>
+
+                    <div class="float-card float-card-3">
+                        <div class="avatars">
+                            <span class="avatar a1"></span>
+                            <span class="avatar a2"></span>
+                            <span class="avatar a3"></span>
+                        </div>
+                        <div>
+                            <p class="fc-title">3 teammate cocok</p>
+                            <p class="fc-sub">Sesuai skill UI/UX kamu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Strip / Trusted by -->
+    <section class="trust-strip" aria-label="Dipercaya oleh mahasiswa">
+        <div class="container">
+            <p class="trust-label">Dipakai mahasiswa dari kampus se-Indonesia</p>
+            <div class="trust-logos">
+                <span>Universitas Indonesia</span>
+                <span>BINUS University</span>
+                <span>ITB</span>
+                <span>UGM</span>
+                <span>Telkom University</span>
+                <span>UI</span>
+                <span>UNPAD</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem section -->
+    <section class="problem" id="problem">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Realita di lapangan</span>
+                <h2>Lomba ada di mana mana, info nya nyebar di mana mana.</h2>
+                <p class="section-lead">
+                    Tiap hari kamu buka Instagram, scroll LinkedIn, balik lagi ke WhatsApp, mampir ke Telegram. Pas niat daftar, eh sudah extended deadline. Familiar?
+                </p>
+            </div>
+
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-num">5+</div>
+                    <p class="problem-text">Platform berbeda yang kamu buka tiap hari cuma buat nyari info lomba.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-num">50<span>jam</span></div>
+                    <p class="problem-text">Waktu yang habis per tahun cuma buat ngumpulin informasi kompetisi.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-num">70<span>%</span></div>
+                    <p class="problem-text">Mahasiswa baru daftar pas lomba sudah masuk periode extended.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-num">3<span>jam</span></div>
+                    <p class="problem-text">Rata rata waktu per minggu yang dipakai cuma buat mantau info lomba.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Fitur unggulan</span>
+                <h2>Semua yang kamu butuhin buat juara, di satu aplikasi.</h2>
+                <p class="section-lead">
+                    Dari nyari lomba sampai dapet mentor, Juarakan dirancang khusus buat ritme hidup mahasiswa Indonesia.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <article class="feature-card f-blue" tabindex="0">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Core Discovery</h3>
+                    <p>Daftar lomba yang sudah dikurasi tim Juarakan. Filter berdasarkan kategori, deadline, level, plus skor kredibilitas penyelenggara biar gak ketipu lomba abal abal.</p>
+                    <ul class="feature-list">
+                        <li>Pencarian dengan keyword</li>
+                        <li>Filter kategori dan level</li>
+                        <li>Skor kredibilitas penyelenggara</li>
+                    </ul>
+                    <a href="#" class="feature-link">Pelajari fitur <span>→</span></a>
+                </article>
+
+                <article class="feature-card f-green" tabindex="0">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28"><circle cx="9" cy="9" r="4" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="17" cy="11" r="3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M2 20c0-3 3-5 7-5s7 2 7 5M14 20c0-2 2-4 5-4s4 2 4 4" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                    </div>
+                    <h3>Teammate Matchmaking</h3>
+                    <p>Nemu rekan tim yang skill nya nyambung sama kamu. Cari berdasarkan jurusan, pengalaman, atau biarin sistem ngerekomendasiin partner yang paling cocok.</p>
+                    <ul class="feature-list">
+                        <li>Match berbasis skill</li>
+                        <li>Request connect dan group formation</li>
+                        <li>Riwayat koneksi teammate</li>
+                    </ul>
+                    <a href="#" class="feature-link">Pelajari fitur <span>→</span></a>
+                </article>
+
+                <article class="feature-card f-yellow" tabindex="0">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M3 9h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>Deadline Management</h3>
+                    <p>Kalender pribadi plus notifikasi berlapis. Disetel 1 minggu, 3 hari, dan 1 hari sebelum deadline. Bisa atur custom alarm pagi atau malam sesuai gaya kamu.</p>
+                    <ul class="feature-list">
+                        <li>Reminder berlapis dan repeating</li>
+                        <li>Kalender kompetisi personal</li>
+                        <li>Dashboard tracking partisipasi</li>
+                    </ul>
+                    <a href="#" class="feature-link">Pelajari fitur <span>→</span></a>
+                </article>
+
+                <article class="feature-card f-purple" tabindex="0">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 2L3 7l9 5 9-5-9-5zM3 12l9 5 9-5M3 17l9 5 9-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Competition Mentoring</h3>
+                    <p>Sesi bareng mentor yang sudah menang lomba sebelumnya. Pilih mentor sesuai bidang, atur jadwal, kasih rating setelah sesi. Belajar dari yang pernah ada di posisi kamu.</p>
+                    <ul class="feature-list">
+                        <li>Daftar mentor terverifikasi</li>
+                        <li>Penjadwalan sesi otomatis</li>
+                        <li>Review dan rating transparan</li>
+                    </ul>
+                    <a href="#" class="feature-link">Pelajari fitur <span>→</span></a>
+                </article>
+
+                <article class="feature-card f-rose" tabindex="0">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Lomba Tersimpan</h3>
+                    <p>Bookmark lomba yang menarik, akses kapan aja tanpa harus scroll ulang. Sort dan filter berdasarkan deadline atau status partisipasi.</p>
+                    <ul class="feature-list">
+                        <li>Dashboard pribadi</li>
+                        <li>Update status manual</li>
+                        <li>Quick access tanpa cari ulang</li>
+                    </ul>
+                    <a href="#" class="feature-link">Pelajari fitur <span>→</span></a>
+                </article>
+
+                <article class="feature-card f-teal" tabindex="0">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28"><rect x="3" y="11" width="18" height="10" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                    </div>
+                    <h3>Akun Aman</h3>
+                    <p>Login pakai email atau Google OAuth. Sesi dijaga JWT yang aman, lupa password tinggal reset via email. Simpel dan terlindungi.</p>
+                    <ul class="feature-list">
+                        <li>Email dan Google OAuth</li>
+                        <li>Reset password lewat email</li>
+                        <li>Manajemen sesi aman</li>
+                    </ul>
+                    <a href="#" class="feature-link">Pelajari fitur <span>→</span></a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="how" id="how">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Cara kerja</span>
+                <h2>Tiga langkah dari nol jadi juara.</h2>
+            </div>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">01</div>
+                    <h3>Buat akun gratis</h3>
+                    <p>Daftar pakai email atau langsung tap Continue with Google. Setup profil kamu kurang dari satu menit.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-num">02</div>
+                    <h3>Temukan dan susun tim</h3>
+                    <p>Browse ratusan lomba terverifikasi, simpan yang menarik, lalu cari teammate yang skill nya nyambung.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-num">03</div>
+                    <h3>Ikut, dibimbing, menang</h3>
+                    <p>Notifikasi deadline jalan otomatis. Booking mentor pas butuh insight, dan fokus ke persiapan terbaikmu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats" id="stats">
+        <div class="container stats-inner">
+            <div class="stats-copy">
+                <span class="eyebrow light">Dampak nyata</span>
+                <h2>Buat 124.500 mahasiswa pemburu juara di Indonesia.</h2>
+                <p>Kompetisi mahasiswa Indonesia kini jadi kanal rekrutmen utama Bank Mandiri, Unilever, hingga Google. Total hadiah ratusan juta per kompetisi. Pertanyaannya: kamu sudah ikut yang mana?</p>
+                <a href="#cta" class="btn-primary btn-lg">Mulai Sekarang</a>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <p class="stat-num" data-target="1200">0</p>
+                    <p class="stat-label">Lomba terkurasi</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-num" data-target="124">0<span>K+</span></p>
+                    <p class="stat-label">Mahasiswa target</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-num" data-target="50">0<span>jam</span></p>
+                    <p class="stat-label">Dihemat per tahun</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-num" data-target="98">0<span>%</span></p>
+                    <p class="stat-label">Lebih cepat nyari lomba</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonial" id="testimonial">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Cerita pemakai</span>
+                <h2>Mahasiswa yang berhenti nyari, mulai menang.</h2>
+            </div>
+
+            <div class="testi-grid">
+                <article class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testi-text">"Dulu gue setiap pagi scroll lima grup WhatsApp cuma buat tau ada lomba apa. Sekarang tinggal buka Juarakan, semua lomba update. Hemat banget waktu."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar ta1"></div>
+                        <div>
+                            <p class="ta-name">Aisya Ramadhani</p>
+                            <p class="ta-role">Manajemen, Universitas Indonesia</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testi-card featured">
+                    <div class="stars">★★★★★</div>
+                    <p class="testi-text">"Fitur matchmaking nya gokil. Gue ketemu tiga partner buat hackathon dalam dua hari. Padahal biasanya kelas gue gak ada yang minat lomba."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar ta2"></div>
+                        <div>
+                            <p class="ta-name">Reza Mahendra</p>
+                            <p class="ta-role">Teknik Informatika, BINUS</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testi-text">"Notifikasi berlapisnya ngebantu banget. Gak pernah lagi ada momen panik h-1 deadline. Mentoring nya juga bantu gue lolos final BCC tahun lalu."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar ta3"></div>
+                        <div>
+                            <p class="ta-name">Putri Anjani</p>
+                            <p class="ta-role">DKV, Telkom University</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container faq-inner">
+            <div class="faq-head">
+                <span class="eyebrow">FAQ</span>
+                <h2>Pertanyaan yang sering ditanyain.</h2>
+                <p>Belum nemu jawabannya? <a href="#cta">Hubungi tim Juarakan</a>.</p>
+            </div>
+
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>
+                        Juarakan beneran gratis?
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <p>Iya. Semua fitur dasar seperti pencarian lomba, simpan dashboard, dan notifikasi deadline gratis selamanya. Sesi mentoring premium opsional dan transparan harganya.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>
+                        Datanya darimana? Dijamin gak hoax?
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <p>Tim kurator Juarakan ngecek manual tiap lomba sebelum tayang. Penyelenggara juga punya skor kredibilitas berdasarkan track record dan legitimasi.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>
+                        Gimana cara nyari teammate?
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <p>Setelah login, lengkapin profil dan skill kamu. Sistem bakal nyaranin kandidat tim yang cocok, plus kamu bisa filter manual berdasarkan jurusan dan pengalaman.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>
+                        Bisa dipakai di HP?
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <p>Bisa banget. Juarakan dirancang mobile first karena kami tahu mahasiswa lebih sering cek lomba dari HP daripada laptop.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>
+                        Aku non teknis, ada lomba buat aku?
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <p>Tentu. Juarakan punya lomba bisnis, desain, esai, debat, video, sampai inovasi sosial. Filter kategori bantu kamu fokus ke yang relevan.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-final" id="cta">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-deco deco-1"></div>
+                <div class="cta-deco deco-2"></div>
+                <div class="cta-deco deco-3"></div>
+
+                <span class="hero-badge light">
+                    <span class="dot"></span>
+                    #SaatnyaJadiJuara
+                </span>
+                <h2>Lomba berikutnya gak bakal kamu lewatin.</h2>
+                <p>Gabung gratis hari ini dan rasain bedanya punya satu tempat buat semua perjalanan lomba kamu.</p>
+                <div class="cta-actions">
+                    <a href="#" class="btn-primary btn-lg">
+                        Daftar Gratis Sekarang
+                        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="#features" class="btn-outline btn-lg">Lihat Fitur Lagi</a>
+                </div>
+                <p class="cta-fine">Tanpa kartu kredit. Tanpa biaya tersembunyi. Cukup email atau akun Google.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="#hero" class="logo">
+                    <span class="logo-mark">
+                        <svg viewBox="0 0 32 32" aria-hidden="true">
+                            <path d="M9 6h14v6a7 7 0 0 1-14 0V6z" fill="#F4C95D"/>
+                            <path d="M9 8H6a3 3 0 0 0 3 3M23 8h3a3 3 0 0 1-3 3" stroke="#F4C95D" stroke-width="1.5" fill="none"/>
+                            <path d="M14 19h4v4h-4z" fill="#F4C95D"/>
+                            <path d="M11 23h10v3H11z" fill="#F4C95D"/>
+                        </svg>
+                    </span>
+                    <span class="logo-text light">Juarakan</span>
+                </a>
+                <p class="footer-tag">Satu platform buat semua perjalanan lombamu. #SaatnyaJadiJuara</p>
+                <div class="socials">
+                    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 17v-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg></a>
+                    <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M15 4c0 3 2 5 5 5v3c-2 0-4-1-5-2v6a6 6 0 1 1-6-6v3a3 3 0 1 0 3 3V4h3z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/></svg></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Produk</h4>
+                <a href="#features">Fitur</a>
+                <a href="#how">Cara Kerja</a>
+                <a href="#cta">Harga</a>
+                <a href="#">Roadmap</a>
+            </div>
+            <div class="footer-col">
+                <h4>Komunitas</h4>
+                <a href="#">Blog</a>
+                <a href="#">Cerita Juara</a>
+                <a href="#">Mentor Hub</a>
+                <a href="#">Event</a>
+            </div>
+            <div class="footer-col">
+                <h4>Bantuan</h4>
+                <a href="#faq">FAQ</a>
+                <a href="#">Kontak</a>
+                <a href="#">Kebijakan Privasi</a>
+                <a href="#">Syarat & Ketentuan</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>© 2026 Juarakan. Dibuat dengan ❤ buat mahasiswa Indonesia.</p>
+                <p>Bahasa: Indonesia</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#hero" class="to-top" id="toTop" aria-label="Kembali ke atas">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
