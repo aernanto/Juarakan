@@ -956,49 +956,103 @@ mark {
         radial-gradient(circle at 100% 0%, rgba(0, 0, 0, 0.15), transparent 50%);
 }
 
-/* Feature nav inline (no card) */
-.app-tabbar {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-    padding: 18px 0 4px;
-    margin-top: 24px;
-    background: transparent;
-    border-top: 1px solid var(--c-border-soft);
+/* Quick nav: feature shortcut buttons under cards */
+.quick-nav {
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px dashed var(--c-border);
 }
 
-.tab {
-    display: flex;
-    flex-direction: column;
+.quick-nav-label {
+    display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 10px 6px;
-    border-radius: 12px;
-    color: var(--c-text-soft);
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
+    color: var(--c-text-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+}
+
+.quick-nav-label svg { color: var(--c-primary); }
+
+.quick-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.qnav-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: white;
+    border: 1px solid var(--c-border-soft);
+    border-radius: 14px;
+    color: var(--c-navy);
+    text-decoration: none;
     transition: all var(--tr);
-    text-align: center;
+    cursor: pointer;
+    position: relative;
 }
 
-.tab:hover {
+.qnav-btn:hover {
+    border-color: var(--c-primary);
+    background: linear-gradient(135deg, var(--c-primary-light) 0%, white 100%);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.qnav-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
     background: var(--c-primary-light);
     color: var(--c-primary);
-    transform: translateY(-2px);
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    transition: all var(--tr);
 }
 
-.tab.active {
-    color: var(--c-primary);
-    background: var(--c-primary-light);
-}
-
-.tab.active::after {
-    content: '';
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
+.qnav-btn:hover .qnav-icon {
     background: var(--c-primary);
-    margin-top: -2px;
+    color: white;
+    transform: scale(1.05) rotate(-4deg);
+}
+
+.qnav-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.qnav-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--c-navy);
+    line-height: 1.2;
+    margin-bottom: 2px;
+}
+
+.qnav-desc {
+    font-size: 12px;
+    color: var(--c-text-light);
+    line-height: 1.2;
+}
+
+.qnav-arrow {
+    color: var(--c-text-light);
+    flex-shrink: 0;
+    transition: all var(--tr);
+}
+
+.qnav-btn:hover .qnav-arrow {
+    color: var(--c-primary);
+    transform: translateX(4px);
 }
 
 /* Hero CTA Row (above app shell) */
@@ -2357,14 +2411,13 @@ mark {
 
     .banner-illustration { max-height: 220px; }
 
-    .app-tabbar {
-        margin-top: 24px;
-        padding: 12px 8px;
-        gap: 4px;
-    }
-
-    .tab { font-size: 11px; padding: 8px 4px; }
-    .tab svg { width: 20px; height: 20px; }
+    .quick-nav { margin-top: 28px; padding-top: 22px; }
+    .quick-nav-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .qnav-btn { padding: 12px 14px; gap: 10px; }
+    .qnav-icon { width: 36px; height: 36px; }
+    .qnav-icon svg { width: 20px; height: 20px; }
+    .qnav-title { font-size: 13px; }
+    .qnav-desc { font-size: 11px; }
 
     .tab span { font-size: 10px; }
     .tab svg { width: 20px; height: 20px; }

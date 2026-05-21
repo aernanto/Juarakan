@@ -202,25 +202,55 @@
                     </div>
                 </div>
 
-                <!-- Bottom Tab Nav -->
-                <nav class="app-tabbar" aria-label="Navigasi aplikasi">
-                    <a href="#hero" class="tab active">
-                        <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M20 20l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                        <span>Core Discovery</span>
-                    </a>
-                    <a href="#features" class="tab">
-                        <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="9" cy="9" r="3.5" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="17" cy="11" r="2.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M2 19c0-2.5 2.5-4 6-4s6 1.5 6 4M14 19c0-1.5 1.5-3 4-3s4 1.5 4 3" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
-                        <span>Team Match</span>
-                    </a>
-                    <a href="#features" class="tab">
-                        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 9l9-5 9 5-9 5z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/><path d="M7 11v5c2 2 8 2 10 0v-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
-                        <span>Mentoring</span>
-                    </a>
-                    <a href="#features" class="tab">
-                        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 4h12v17l-6-4-6 4z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>
-                        <span>Saved</span>
-                    </a>
-                </nav>
+                <!-- Quick nav buttons with context label -->
+                <div class="quick-nav">
+                    <p class="quick-nav-label">
+                        Atau lompat langsung ke fitur lainnya
+                        <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 13l4 4 6-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    </p>
+                    <nav class="quick-nav-grid" aria-label="Pintasan fitur">
+                        <a href="#features" class="qnav-btn">
+                            <span class="qnav-icon">
+                                <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M20 20l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            </span>
+                            <span class="qnav-text">
+                                <span class="qnav-title">Core Discovery</span>
+                                <span class="qnav-desc">Cari lomba</span>
+                            </span>
+                            <svg viewBox="0 0 24 24" width="16" height="16" class="qnav-arrow" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <a href="#features" class="qnav-btn">
+                            <span class="qnav-icon">
+                                <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="9" cy="9" r="3.5" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="17" cy="11" r="2.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M2 19c0-2.5 2.5-4 6-4s6 1.5 6 4M14 19c0-1.5 1.5-3 4-3s4 1.5 4 3" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+                            </span>
+                            <span class="qnav-text">
+                                <span class="qnav-title">Team Match</span>
+                                <span class="qnav-desc">Cari teammate</span>
+                            </span>
+                            <svg viewBox="0 0 24 24" width="16" height="16" class="qnav-arrow" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <a href="#features" class="qnav-btn">
+                            <span class="qnav-icon">
+                                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 9l9-5 9 5-9 5z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/><path d="M7 11v5c2 2 8 2 10 0v-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+                            </span>
+                            <span class="qnav-text">
+                                <span class="qnav-title">Mentoring</span>
+                                <span class="qnav-desc">Bimbingan mentor</span>
+                            </span>
+                            <svg viewBox="0 0 24 24" width="16" height="16" class="qnav-arrow" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <a href="#features" class="qnav-btn">
+                            <span class="qnav-icon">
+                                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 4h12v17l-6-4-6 4z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>
+                            </span>
+                            <span class="qnav-text">
+                                <span class="qnav-title">Saved</span>
+                                <span class="qnav-desc">Lomba tersimpan</span>
+                            </span>
+                            <svg viewBox="0 0 24 24" width="16" height="16" class="qnav-arrow" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </nav>
+                </div>
             </div>
 
         </div>
